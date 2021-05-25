@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'MerchantController', type: :request do 
-  describe "get all merchants" do 
+  describe "index" do 
     it 'returns 20 merchants per page by default' do
       create_list(:merchant, 21)
       get '/api/v1/merchants'
@@ -55,7 +55,7 @@ RSpec.describe 'MerchantController', type: :request do
     end
   end
 
-  describe "get one merchant" do
+  describe "Show" do
     it "can get a single merchant based on id" do
       id = create(:merchant).id
 
