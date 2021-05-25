@@ -1,43 +1,74 @@
 require 'rails_helper'
 
 RSpec.describe 'MerchantController', type: :request do 
-  before :each do
-    @merchant1 = Merchant.create(name: Faker::Name.name, id: 1)
-    @merchant2 = Merchant.create(name: Faker::Name.name, id: 2)
-    @merchant3 = Merchant.create(name: Faker::Name.name, id: 3)
-    @merchant4 = Merchant.create(name: Faker::Name.name, id: 4)
-    @merchant5 = Merchant.create(name: Faker::Name.name, id: 5)
-    @merchant1 = Merchant.create(name: Faker::Name.name, id: 6)
-    @merchant2 = Merchant.create(name: Faker::Name.name, id: 7)
-    @merchant3 = Merchant.create(name: Faker::Name.name, id: 8)
-    @merchant4 = Merchant.create(name: Faker::Name.name, id: 9)
-    @merchant5 = Merchant.create(name: Faker::Name.name, id: 10)
-    @merchant1 = Merchant.create(name: Faker::Name.name, id: 11)
-    @merchant2 = Merchant.create(name: Faker::Name.name, id: 12)
-    @merchant3 = Merchant.create(name: Faker::Name.name, id: 13)
-    @merchant4 = Merchant.create(name: Faker::Name.name, id: 14)
-    @merchant5 = Merchant.create(name: Faker::Name.name, id: 15)
-    @merchant1 = Merchant.create(name: Faker::Name.name, id: 16)
-    @merchant2 = Merchant.create(name: Faker::Name.name, id: 17)
-    @merchant3 = Merchant.create(name: Faker::Name.name, id: 18)
-    @merchant4 = Merchant.create(name: Faker::Name.name, id: 19)
-    @merchant5 = Merchant.create(name: Faker::Name.name, id: 20)
-  end
-
   describe "get all merchants" do 
-    it 'returns all merchants' do
+    it 'returns 20 merchants per page by default' do
+      create_list(:merchant, 21)
       get '/api/v1/merchants'
 
-    expect(response).to be_successful
+      expect(response).to be_successful
 
-    merchants = JSON.parse(response.body, symbolize_names: true)
+      merchants = JSON.parse(response.body, symbolize_names: true)
 
-    expect(merchants[:data].count).to eq(20)
+      expect(merchants[:data].count).to eq(20)
 
       merchants[:data].each do |merchant|
         expect(merchant[:attributes]).to have_key(:name)
         expect(merchant[:attributes][:name]).to be_a(String)
       end
+    end
+
+    it "can fetch merchants by per page" do
+      create_list(:merchant, 100)
+
+      get '/api/v1/merchants', params: { per_page: 40 }
+
+      expect(response).to be_successful
+
+      merchants = JSON.parse(response.body, symbolize_names: true)
+
+      expect(merchants[:data].count).to eq(40)
+    end
+
+    it "can fetch merchants by page number" do
+      create_list(:merchant, 40)
+
+      get '/api/v1/merchants', params: { page: 2 }
+
+      expect(response).to be_successful
+
+      merchants = JSON.parse(response.body, symbolize_names: true)
+
+      expect(merchants[:data].count).to eq(20)
+      expect(merchants[:data].first[:attributes][:name]).to eq(Merchant.all[20].name)
+    end
+
+    it 'can fetch a page of merchants which would contain no data' do
+      get '/api/v1/merchants'
+
+      expect(response).to be_successful
+
+      merchants = JSON.parse(response.body, symbolize_names: true)
+
+      expect(merchants[:data].count).to eq(0)
+      expect(merchants[:data]).to be_an(Array)
+    end
+  end
+
+  describe "get one merchant" do
+    it "can get a single merchant based on id" do
+      id = create(:merchant).id
+
+      get "/api/v1/merchants/#{id}"
+
+      merchant = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to be_successful
+
+      expect(merchant.count).to eq(1)
+
+      expect(merchant[:data][:attributes]).to have_key(:name)
+      expect(merchant[:data][:attributes][:name]).to be_a(String)
     end
   end
 end
