@@ -9,7 +9,7 @@ class Api::V1::ItemsController < ApplicationController
     render json: ItemSerializer.new(@item)
   end
 
-  def create
+  def create #fix to destroy fake items for postman test to pass
     item = Item.create(item_params)
     render json: ItemSerializer.new(item), status: :created
   end
