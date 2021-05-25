@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe  'ItemController', type: :request do 
-  describe "get all items" do 
+  describe "item index" do 
     it 'returns 20 items per page by default' do
       create_list(:item, 21)
       get '/api/v1/items'
@@ -56,23 +56,6 @@ RSpec.describe  'ItemController', type: :request do
 
       expect(items[:data].count).to eq(0)
       expect(items[:data]).to be_an(Array)
-    end
-  end
-
-  describe "get one item" do
-    it "can get a single item based on id" do
-      id = create(:item).id
-
-      get "/api/v1/items/#{id}"
-
-      item = JSON.parse(response.body, symbolize_names: true)
-
-      expect(response).to be_successful
-
-      expect(item.count).to eq(1)
-
-      expect(item[:data][:attributes]).to have_key(:name)
-      expect(item[:data][:attributes][:name]).to be_a(String)
     end
   end
 end
