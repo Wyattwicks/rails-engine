@@ -9,7 +9,7 @@ class Api::V1::ItemsController < ApplicationController
     render json: ItemSerializer.new(@item)
   end
 
-  def create #fix to destroy fake items for postman test to pass
+  def create
     item = Item.create(item_params)
     render json: ItemSerializer.new(item), status: :created
   end
@@ -23,7 +23,7 @@ class Api::V1::ItemsController < ApplicationController
     end
   end
     
-  def destroy
+  def destroy #fix to delete invoice if the item was the only one on it
     @item = Item.find(params[:id])
     render json: Item.delete(@item)
   end

@@ -280,9 +280,9 @@
         "lines": [
           1,
           1,
-          177,
-          177,
-          177,
+          178,
+          178,
+          178,
           1,
           null,
           null
@@ -303,7 +303,7 @@
         "lines": [
           1,
           1,
-          331,
+          332,
           null,
           null
         ]
@@ -349,6 +349,8 @@
           1,
           null,
           1,
+          1,
+          null,
           null,
           null,
           null
@@ -438,6 +440,28 @@
           1,
           2,
           2,
+          null,
+          null
+        ]
+      },
+      "/Users/wyattwicks/turing/3module/rails-engine/spec/requests/api/v1/item_merchants/item_merchant_index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -616,7 +640,7 @@
           null
         ]
       },
-      "/Users/wyattwicks/turing/3module/rails-engine/spec/requests/api/v1/merchant_items.rb/merchant_item_index_spec.rb": {
+      "/Users/wyattwicks/turing/3module/rails-engine/spec/requests/api/v1/merchant_items/merchant_item_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -725,6 +749,38 @@
           null
         ]
       },
+      "/Users/wyattwicks/turing/3module/rails-engine/app/controllers/api/v1/item_merchants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/wyattwicks/turing/3module/rails-engine/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          1,
+          16,
+          null,
+          null,
+          1,
+          8,
+          8,
+          null,
+          null
+        ]
+      },
+      "/Users/wyattwicks/turing/3module/rails-engine/app/serializers/merchant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/wyattwicks/turing/3module/rails-engine/app/controllers/api/v1/items_controller.rb": {
         "lines": [
           1,
@@ -768,20 +824,6 @@
           null
         ]
       },
-      "/Users/wyattwicks/turing/3module/rails-engine/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          16,
-          null,
-          null,
-          1,
-          8,
-          8,
-          null,
-          null
-        ]
-      },
       "/Users/wyattwicks/turing/3module/rails-engine/app/serializers/item_serializer.rb": {
         "lines": [
           1,
@@ -814,16 +856,8 @@
           null,
           null
         ]
-      },
-      "/Users/wyattwicks/turing/3module/rails-engine/app/serializers/merchant_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1621987242
+    "timestamp": 1621995189
   }
 }
