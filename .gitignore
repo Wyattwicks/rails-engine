@@ -8,6 +8,7 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
+/coverage/
 /log/*
 /tmp/*
 !/log/.keep
@@ -21,4 +22,3 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/coverage/index.html
