@@ -10,3 +10,5 @@ Rails.application.routes.draw do
     end
   end
 end
+
+# GET /api/v1/revenue/merchants?quantity=x
