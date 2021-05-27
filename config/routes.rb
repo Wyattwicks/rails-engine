@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+
+      #custom
+      get '/revenue/merchants', to: "revenue/merchants#index"
+
+      #resources
       resources :merchants, only: [:index, :show] do
         resources :items, controller: :merchant_items, only: [:index]
       end

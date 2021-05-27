@@ -5155,3 +5155,640 @@ Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
 ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=string-instead-of-integer):
   
 app/controllers/api/v1/item_merchants_controller.rb:3:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 13:39:06 -0600
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Revenue::MerchantRevenuesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 13:39:06 -0600
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 13:39:06 -0600
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 13:39:06 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 13:39:06 -0600
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 13:39:06 -0600
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Revenue::MerchantRevenuesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Revenue::MerchantRevenuesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Revenue::MerchantRevenuesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Revenue::MerchantRevenuesController):
+  
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+ActionController::RoutingError (uninitialized constant Api::V1::Revenue::MerchantRevenuesController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 13:40:16 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 21.0ms)
+
+
+  
+NameError (uninitialized constant Api::V1::Revenue::MerchantsController::MerchantNameRevenueSerializer):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 13:40:17 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 13:40:17 -0600
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::V1::Revenue::MerchantsController::MerchantNameRevenueSerializer):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 13:40:17 -0600
+  Parameters: {"quantity"=>"1000000"}
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 13:40:17 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 13:40:17 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+
+  
+  Parameters: {"quantity"=>""}
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe4a1c6150>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+
+  
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.0ms)
+
+
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe4a1bd460>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+  
+  
+NameError (uninitialized constant Api::V1::Revenue::MerchantsController::MerchantNameRevenueSerializer):
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe456d3648>):
+  
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 13:42:10 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+  [1m[36mMerchant Load (4.1ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:5
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 13.4ms)
+
+
+  
+NoMethodError (undefined method `single_revenue' for #<Merchant:0x00007ffe4a768f40>):
+  
+app/serializers/merchant_revenue_serializer.rb:5:in `block in <class:MerchantRevenueSerializer>'
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 13:42:10 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:5
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `single_revenue' for #<Merchant:0x00007ffe44af2d10>):
+  
+app/serializers/merchant_revenue_serializer.rb:5:in `block in <class:MerchantRevenueSerializer>'
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 13:42:10 -0600
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 13:42:10 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 13:42:10 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 13:42:10 -0600
+  [1m[36mMerchant Load (0.9ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" LIMIT $1[0m  [["LIMIT", 1000000]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:5
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `single_revenue' for #<Merchant:0x00007ffe446eb640>):
+  
+app/serializers/merchant_revenue_serializer.rb:5:in `block in <class:MerchantRevenueSerializer>'
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>""}
+  Parameters: {"quantity"=>"asdasd"}
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe43187308>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+  
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe4467f508>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe4575bbd8>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 13:43:00 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" LIMIT $1[0m  [["LIMIT", 10]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:5
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `revenue' for #<Merchant:0x00007ffe4aafd0c0>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 13:43:00 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:5
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `revenue' for #<Merchant:0x00007ffe4344ca20>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 13:43:00 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 13:43:00 -0600
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 13:43:00 -0600
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 13:43:00 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+  Parameters: {"quantity"=>""}
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+  [1m[36mMerchant Load (56.0ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" LIMIT $1[0m  [["LIMIT", 1000000]]
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+
+  
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:5
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 56.0ms)
+
+
+  
+NoMethodError (undefined method `revenue' for #<Merchant:0x00007ffe470c42a0>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe4a6614d0>):
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe4a901dc0>):
+NoMethodError (undefined method `bad_params_400' for #<Api::V1::Revenue::MerchantsController:0x00007ffe4a8f6448>):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:3:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 14:04:41 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.1ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Merchant' to association named 'transactions'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:7:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 14:04:41 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Merchant' to association named 'transactions'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:7:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 14:04:41 -0600
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 14:04:41 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>""}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Merchant' to association named 'transactions'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 14:04:41 -0600
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 14:04:41 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Merchant' to association named 'transactions'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Merchant' to association named 'transactions'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:7:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Merchant' to association named 'transactions'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:5:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 14:11:51 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 6.0ms)
+
+
+  
+ActiveRecord::HasManyThroughSourceAssociationNotFoundError (Could not find the source association(s) "invoice_item" or :invoice_items in model Invoice. Try 'has_many :invoice_items, :through => :invoices, :source => <name>'. Is it one of customer, merchant, or transactions?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 14:11:52 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::HasManyThroughSourceAssociationNotFoundError (Could not find the source association(s) "invoice_item" or :invoice_items in model Invoice. Try 'has_many :invoice_items, :through => :invoices, :source => <name>'. Is it one of customer, merchant, or transactions?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 14:11:52 -0600
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 14:11:52 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 14:11:52 -0600
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 14:11:52 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::HasManyThroughSourceAssociationNotFoundError (Could not find the source association(s) "invoice_item" or :invoice_items in model Invoice. Try 'has_many :invoice_items, :through => :invoices, :source => <name>'. Is it one of customer, merchant, or transactions?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::HasManyThroughSourceAssociationNotFoundError (Could not find the source association(s) "invoice_item" or :invoice_items in model Invoice. Try 'has_many :invoice_items, :through => :invoices, :source => <name>'. Is it one of customer, merchant, or transactions?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>""}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::HasManyThroughSourceAssociationNotFoundError (Could not find the source association(s) "invoice_item" or :invoice_items in model Invoice. Try 'has_many :invoice_items, :through => :invoices, :source => <name>'. Is it one of customer, merchant, or transactions?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::HasManyThroughSourceAssociationNotFoundError (Could not find the source association(s) "invoice_item" or :invoice_items in model Invoice. Try 'has_many :invoice_items, :through => :invoices, :source => <name>'. Is it one of customer, merchant, or transactions?):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 14:23:17 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+  [1m[36mMerchant Load (35.0ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 10]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 75ms (Views: 8.1ms | ActiveRecord: 51.2ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 14:23:17 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 14:23:17 -0600
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 14:23:17 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 14:23:17 -0600
+  [1m[36mMerchant Load (5.9ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1]]
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 14:23:17 -0600
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 5.9ms)
+
+
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>""}
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.3ms)
+
+
+  Parameters: {"quantity"=>"asdasd"}
+  
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+ArgumentError (invalid value for Integer(): ""):
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.8ms)
+
+
+  
+  
+  [1m[36mMerchant Load (7.7ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1000000]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 9.5ms)
+
+
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+ArgumentError (invalid value for Integer(): "asdasd"):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+  [1m[36mMerchant Load (35.2ms)[0m  [1m[34mSELECT merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC[0m  [["result", 1], ["status", "shipped"]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 89ms (Views: 52.3ms | ActiveRecord: 36.1ms)
+
+
