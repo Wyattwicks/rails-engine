@@ -5996,3 +5996,275 @@ app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
 Completed 200 OK in 112ms (Views: 74.7ms | ActiveRecord: 36.9ms)
 
 
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:37:39 -0600
+Processing by Api::V1::MerchantsController#show as */*
+  Parameters: {"name"=>"iLl", "id"=>"find"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Merchant with 'id'=find):
+  
+app/controllers/api/v1/merchants_controller.rb:8:in `show'
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:37:39 -0600
+Processing by Api::V1::MerchantsController#show as */*
+  Parameters: {"name"=>"NOMATCH", "id"=>"find"}
+  [1m[36mMerchant Load (0.3ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE "merchants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:8
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Merchant with 'id'=find):
+  
+app/controllers/api/v1/merchants_controller.rb:8:in `show'
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:39:58 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (8.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:39:58 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:40:31 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:40:31 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:41:05 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:41:05 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:44:54 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name_includes' for #<Class:0x00007ffe4ad03658>):
+  
+app/controllers/api/v1/merchants_controller.rb:20:in `find'
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:44:54 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name_includes' for #<Class:0x00007ffe4ad03658>):
+  
+app/controllers/api/v1/merchants_controller.rb:20:in `find'
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:45:34 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name_includes' for #<Class:0x00007ffe44d02740>):
+  
+app/controllers/api/v1/merchants_controller.rb:20:in `find'
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:45:34 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name_includes' for #<Class:0x00007ffe44d02740>):
+  
+app/controllers/api/v1/merchants_controller.rb:20:in `find'
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:48:05 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (1.1ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:48:05 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:48:59 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:48:59 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (Unrecognized status code :null):
+  
+app/controllers/api/v1/merchants_controller.rb:17:in `find'
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:51:18 -0600
+  
+SyntaxError (/Users/wyattwicks/turing/3module/rails-engine/app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...er.new(@merchant), status: :404
+...                            ^~~):
+  
+app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:51:18 -0600
+  
+SyntaxError (/Users/wyattwicks/turing/3module/rails-engine/app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...er.new(@merchant), status: :404
+...                            ^~~):
+  
+app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:51:27 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:51:28 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.8ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 2ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:52:59 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.6ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:53:00 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 14:53:18 -0600
+  
+SyntaxError (/Users/wyattwicks/turing/3module/rails-engine/app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tLABEL
+      render json: status: :not_found
+                   ^~~~~~~):
+  
+app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tLABEL
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 14:53:18 -0600
+  
+SyntaxError (/Users/wyattwicks/turing/3module/rails-engine/app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tLABEL
+      render json: status: :not_found
+                   ^~~~~~~):
+  
+app/controllers/api/v1/merchants_controller.rb:17: syntax error, unexpected tLABEL
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 15:04:06 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (1.9ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 15:04:06 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 15:07:44 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 15ms (Views: 0.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 15:07:44 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 15:07:53 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 15:07:53 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 15:08:54 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.4ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 15:08:54 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+

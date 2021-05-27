@@ -384,6 +384,7 @@
           null,
           null,
           1,
+          1,
           null,
           null,
           1,
@@ -718,6 +719,41 @@
           null
         ]
       },
+      "/Users/wyattwicks/turing/3module/rails-engine/spec/requests/api/v1/merchants/merchant_find_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/wyattwicks/turing/3module/rails-engine/spec/requests/api/v1/merchants/merchant_index_spec.rb": {
         "lines": [
           1,
@@ -955,6 +991,15 @@
           1,
           1,
           null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -980,6 +1025,6 @@
         ]
       }
     },
-    "timestamp": 1622147432
+    "timestamp": 1622149746
   }
 }
