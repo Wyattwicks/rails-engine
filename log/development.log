@@ -5792,3 +5792,207 @@ app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
 Completed 200 OK in 89ms (Views: 52.3ms | ActiveRecord: 36.1ms)
 
 
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 14:24:25 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+  [1m[36mMerchant Load (5.3ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 10]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 14:24:25 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 14:24:25 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 14:24:25 -0600
+  Parameters: {"quantity"=>"1000000"}
+  [1m[36mMerchant Load (6.1ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 14:24:25 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>""}
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 14:24:25 -0600
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+ArgumentError (invalid value for Integer(): ""):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  
+  [1m[36mMerchant Load (54.7ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1000000]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+ArgumentError (invalid value for Integer(): "asdasd"):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 2.1ms | ActiveRecord: 54.7ms)
+
+
+  [1m[36mMerchant Load (44.2ms)[0m  [1m[34mSELECT merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC[0m  [["result", 1], ["status", "shipped"]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 53ms (Views: 8.0ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 14:28:12 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+  [1m[36mMerchant Load (4.0ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 10]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 25ms (Views: 3.5ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 14:28:13 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 14:28:13 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 14:28:13 -0600
+  [1m[36mMerchant Load (5.1ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 14:28:13 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 14:28:13 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 5.1ms)
+
+
+  Parameters: {"quantity"=>""}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  [1m[36mMerchant Load (7.0ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1000000]]
+ArgumentError (invalid value for Integer(): ""):
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+Completed 200 OK in 11ms (Views: 3.2ms | ActiveRecord: 7.0ms)
+
+
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mMerchant Load (37.6ms)[0m  [1m[34mSELECT merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC[0m  [["result", 1], ["status", "shipped"]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 40ms (Views: 1.6ms | ActiveRecord: 37.6ms)
+
+
+ArgumentError (invalid value for Integer(): "asdasd"):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 14:30:37 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+  [1m[36mMerchant Load (4.3ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 10]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 14:30:37 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 14:30:37 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 14:30:37 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 14:30:37 -0600
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 14:30:37 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  [1m[36mMerchant Load (6.0ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 9ms (Views: 2.6ms | ActiveRecord: 6.0ms)
+
+
+  Parameters: {"quantity"=>""}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid value for Integer(): ""):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid value for Integer(): "asdasd"):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+  [1m[36mMerchant Load (5.9ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1000000]]
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 86ms (Views: 79.4ms | ActiveRecord: 5.9ms)
+
+
+  [1m[36mMerchant Load (4.3ms)[0m  [1m[34mSELECT merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC[0m  [["result", 1], ["status", "shipped"]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=10" for ::1 at 2021-05-27 14:33:42 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"10"}
+  [1m[36mMerchant Load (5.3ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 10]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 13ms (Views: 3.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/revenue/merchants?quantity=1" for ::1 at 2021-05-27 14:33:42 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1"}
+Started GET "/api/v1/revenue/merchants?quantity=1000000" for ::1 at 2021-05-27 14:33:42 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"1000000"}
+Started GET "/api/v1/revenue/merchants?quantity=" for ::1 at 2021-05-27 14:33:42 -0600
+Started GET "/api/v1/revenue/merchants?quantity=asdasd" for ::1 at 2021-05-27 14:33:42 -0600
+  [1m[36mMerchant Load (6.4ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1]]
+Started GET "/api/v1/revenue/merchants" for ::1 at 2021-05-27 14:33:42 -0600
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>""}
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 6.4ms)
+
+
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+  Parameters: {"quantity"=>"asdasd"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mMerchant Load (7.2ms)[0m  [1m[34mSELECT  merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC LIMIT $3[0m  [["result", 1], ["status", "shipped"], ["LIMIT", 1000000]]
+Processing by Api::V1::Revenue::MerchantsController#index as */*
+ArgumentError (invalid value for Integer(): "asdasd"):
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 7.2ms)
+
+
+  
+ArgumentError (invalid value for Integer(): ""):
+  
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+app/controllers/api/v1/revenue/merchants_controller.rb:4:in `index'
+  [1m[36mMerchant Load (36.9ms)[0m  [1m[34mSELECT merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue FROM "merchants" INNER JOIN "invoices" ON "invoices"."merchant_id" = "merchants"."id" INNER JOIN "invoice_items" ON "invoice_items"."invoice_id" = "invoices"."id" INNER JOIN "invoices" "invoices_invoice_items" ON "invoices_invoice_items"."id" = "invoice_items"."invoice_id" INNER JOIN "transactions" ON "transactions"."invoice_id" = "invoices_invoice_items"."id" WHERE "transactions"."result" = $1 AND "invoices"."status" = $2 GROUP BY "merchants"."id" ORDER BY revenue DESC[0m  [["result", 1], ["status", "shipped"]]
+  ↳ app/controllers/api/v1/revenue/merchants_controller.rb:4
+Completed 200 OK in 112ms (Views: 74.7ms | ActiveRecord: 36.9ms)
+
+
