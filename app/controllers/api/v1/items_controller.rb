@@ -28,8 +28,13 @@ class Api::V1::ItemsController < ApplicationController
     render json: Item.delete(@item)
   end
 
+  def find_all
+    @items = Item.where("name ilike ?", "%#{params[:name]}%").order(:name)
+    render json: ItemSerializer.new(@items)
+  end
+
   private
-  
+
   def item_params
     params.permit(:name,
                         :description,
