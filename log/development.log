@@ -6268,3 +6268,91 @@ Processing by Api::V1::MerchantsController#find as */*
 Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/api/v1/items/find_all?name=hArU" for ::1 at 2021-05-27 15:09:32 -0600
+Processing by Api::V1::ItemsController#show as */*
+  Parameters: {"name"=>"hArU", "id"=>"find_all"}
+  [1m[36mItem Load (3.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/items_controller.rb:8
+Completed 404 Not Found in 9ms (ActiveRecord: 7.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=find_all):
+  
+app/controllers/api/v1/items_controller.rb:8:in `show'
+Started GET "/api/v1/items/find_all?name=NOMATCH" for ::1 at 2021-05-27 15:09:32 -0600
+Processing by Api::V1::ItemsController#show as */*
+  Parameters: {"name"=>"NOMATCH", "id"=>"find_all"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/items_controller.rb:8
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=find_all):
+  
+app/controllers/api/v1/items_controller.rb:8:in `show'
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 15:09:53 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 15:09:53 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.5ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/items/find_all?name=hArU" for ::1 at 2021-05-27 15:12:22 -0600
+Processing by Api::V1::ItemsController#find_all as */*
+  Parameters: {"name"=>"hArU"}
+  [1m[36mItem Load (12.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (name ilike '%hArU%') ORDER BY "items"."name" ASC[0m
+  ↳ app/controllers/api/v1/items_controller.rb:33
+Completed 200 OK in 27ms (Views: 7.2ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/api/v1/items/find_all?name=NOMATCH" for ::1 at 2021-05-27 15:12:22 -0600
+Processing by Api::V1::ItemsController#find_all as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (name ilike '%NOMATCH%') ORDER BY "items"."name" ASC[0m
+  ↳ app/controllers/api/v1/items_controller.rb:33
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/merchants/find?name=iLl" for ::1 at 2021-05-27 15:12:36 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"iLl"}
+  [1m[36mMerchant Load (5.9ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%iLl%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/merchants/find?name=NOMATCH" for ::1 at 2021-05-27 15:12:36 -0600
+Processing by Api::V1::MerchantsController#find as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mMerchant Load (0.7ms)[0m  [1m[34mSELECT  "merchants".* FROM "merchants" WHERE (name ILIKE '%NOMATCH%') ORDER BY "merchants"."name" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/merchants_controller.rb:13
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/items/find_all?name=hArU" for ::1 at 2021-05-27 15:12:36 -0600
+Processing by Api::V1::ItemsController#find_all as */*
+  Parameters: {"name"=>"hArU"}
+  [1m[36mItem Load (5.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (name ilike '%hArU%') ORDER BY "items"."name" ASC[0m
+  ↳ app/controllers/api/v1/items_controller.rb:33
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api/v1/items/find_all?name=NOMATCH" for ::1 at 2021-05-27 15:12:36 -0600
+Processing by Api::V1::ItemsController#find_all as */*
+  Parameters: {"name"=>"NOMATCH"}
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (name ilike '%NOMATCH%') ORDER BY "items"."name" ASC[0m
+  ↳ app/controllers/api/v1/items_controller.rb:33
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 3.3ms)
+
+

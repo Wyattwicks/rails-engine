@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
       #custom
       get '/revenue/merchants', to: "revenue/merchants#index"
+
       get '/merchants/find', to: "merchants#find"
+      
+      get '/items/find_all', to: 'items#find_all'
 
       #resources
       resources :merchants, only: [:index, :show] do

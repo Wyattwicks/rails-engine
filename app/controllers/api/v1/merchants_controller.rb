@@ -14,7 +14,7 @@ class Api::V1::MerchantsController < ApplicationController
     if @merchant 
       render json: MerchantSerializer.new(@merchant)
     else
-      render json: { data: {} }, status: :not_found
+      render json: {data: {}}, status: :not_found
     end
   end
 end
