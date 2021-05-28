@@ -27,18 +27,18 @@ RSpec.describe 'revenue merchant' do
     @transaction_3 = create(:transaction, result: "success", invoice: @invoice_3)
   end
   
-  # describe 'merchant revenue index' do
-  #   it 'displays a list of merchants sorted by revenue' do  
-  #     x = 3
-  #     get "/api/v1/revenue/merchants?quantity=#{x}"
+  describe 'merchant revenue index' do
+    it 'displays a list of merchants sorted by revenue' do  
+      x = 3
+      get "/api/v1/revenue/merchants?quantity=#{x}"
 
-  #     expect(response).to be_successful
+      expect(response).to be_successful
       
-  #     merchants = JSON.parse(response.body, symbolize_names: true)
+      merchants = JSON.parse(response.body, symbolize_names: true)
 
-  #     expect(merchants[:data].size).to eq(3)
-  #     expect(merchants[:data].first[:attributes][:revenue]).to eq(8.0)
-  #     expect(merchants[:data].last[:attributes][:revenue]).to eq(2.0)
-  #   end
-  # end
+      expect(merchants[:data].size).to eq(3)
+      expect(merchants[:data].first[:attributes][:revenue]).to eq(8.0)
+      expect(merchants[:data].last[:attributes][:revenue]).to eq(2.0)
+    end
+  end
 end

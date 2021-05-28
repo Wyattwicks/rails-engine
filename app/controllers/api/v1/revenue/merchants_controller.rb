@@ -10,6 +10,10 @@ class Api::V1::Revenue::MerchantsController < ApplicationController
   
   def single_merchant_revenue
     @merchant = Merchant.find(params[:id])
-    render json: MerchantRevenueSerializer.new(@merchant)
+    if @merchant
+      render json: MerchantRevenueSerializer.new(@merchant)
+    else
+      render json: { error: "error"}, status: 400
+    end
   end
 end

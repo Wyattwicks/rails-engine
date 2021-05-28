@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
       #custom
       get '/revenue/merchants', to: "revenue/merchants#total_revenue"
+      get "/revenue/merchants/:id", to: "revenue/merchants#single_merchant_revenue"
 
       get '/merchants/find', to: "merchants#find"
       
