@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       
       get '/items/find_all', to: 'items#find_all'
 
+      get '/revenue/items', to: "revenue/items#total_revenue"
+
       #resources
       resources :merchants, only: [:index, :show] do
         resources :items, controller: :merchant_items, only: [:index]

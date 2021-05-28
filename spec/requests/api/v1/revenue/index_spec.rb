@@ -36,7 +36,7 @@ RSpec.describe 'revenue merchant' do
       
       merchants = JSON.parse(response.body, symbolize_names: true)
 
-      expect(merchants[:data].size).to eq(3)
+      expect(Merchant.all.count).to eq(3)
       expect(merchants[:data].first[:attributes][:revenue]).to eq(8.0)
       expect(merchants[:data].last[:attributes][:revenue]).to eq(2.0)
     end
