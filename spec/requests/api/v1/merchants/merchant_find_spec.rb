@@ -25,7 +25,6 @@ RSpec.describe 'MerchantController', type: :request do
       merchant = JSON.parse(response.body, symbolize_names: true)
       expect(response).to_not be_successful
       expect(response.status).to eq(404)
-
     end
   end
 end
