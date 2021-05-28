@@ -28,7 +28,7 @@ RSpec.describe 'revenue merchant' do
   end
   describe 'merchant revenue index' do
     it 'displays a list of merchants sorted by revenue' do
-      x = 3
+      x = ""
       get "/api/v1/revenue/merchants?quantity=#{x}"
       merchants = JSON.parse(response.body, symbolize_names: true)
 

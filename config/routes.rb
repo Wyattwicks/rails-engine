@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       #custom
-      get '/revenue/merchants', to: "revenue/merchants#index"
+      get '/revenue/merchants', to: "revenue/merchants#total_revenue"
 
       get '/merchants/find', to: "merchants#find"
       
@@ -20,4 +20,4 @@ Rails.application.routes.draw do
   end
 end
 
-# GET /api/v1/revenue/merchants?quantity=x
+

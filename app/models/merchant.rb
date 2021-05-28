@@ -9,15 +9,16 @@ class Merchant < ApplicationRecord
   validates_presence_of :name
 
   def self.total_revenue_ranked(quantity)
-    joins(invoice_items: {invoice: :transactions})
-    .select('merchants.*, sum(invoice_items.unit_price * invoice_items.quantity) AS revenue')
-    .where(transactions: {result: "success"}, invoices: {status: "shipped"})
+    joins(items: {invoice_items: {invoice: :transactions}})
+    .where("transactions.result = ?", 'success')
+    .where("invoices.status = ?", 'shipped')
     .group(:id)
-    .order("revenue DESC")
+    .select("merchants.*, sum(invoice_items.quantity * invoice_items.unit_price) as revenue")
+    .order(revenue: :desc)
     .limit(quantity)
   end
 
-  def total_revenue
+  def single_revenue
     invoice_items
     .joins(:transactions)
     .where("transactions.result = 'success'")
