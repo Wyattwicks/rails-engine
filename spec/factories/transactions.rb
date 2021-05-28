@@ -4,6 +4,6 @@ FactoryBot.define do
     credit_card_expiration_date { Faker::Business.credit_card_expiry_date }
     result { rand(0..1) }
 
-    association :invoice, factory: :random_invoice
+    association :invoice, factory: :invoice
   end
 end
